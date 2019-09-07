@@ -9,3 +9,6 @@ The underlying data for this dashboard contains information about the chemical c
    2) Droughts: Percentages of various ranges of drought severities for counties from 2010 - 2016.
    3) Industry Occupation: Estimated working population (16 yrs and over) for the various industries indexed by county, for 2010-2016.
    4) Water Usage: Information aobut water usage (irrigation, public supply, crop, etc.) and thermoelectric power generated for counties in the year 2010.
+
+## Implementation
+This dashboard was implented using R Shiny's shinydashboard package. It utilizes Plotly, Highcharter, GGplot, and many more packages for its visualizations.
