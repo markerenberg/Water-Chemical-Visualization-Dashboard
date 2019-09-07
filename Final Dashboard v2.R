@@ -193,9 +193,10 @@ $("#county_map").on("click", function(){
 
 ui <- shinyUI(
   dashboardPage(
-  dashboardHeader(title = "Dashboard"),
+  dashboardHeader(title = "Dashboard",titleWidth=250),
   dashboardSidebar(disable=T),
   dashboardBody(
+    #tags$style(".pusher.container .ui.segment .ui.stackable.container.grid {margin:0px!important;}"),
     h1('Chemical Contaminant Interactive Dashboard'),
     fluidRow(
         box(title = 'Median Chemical Value Across Water Supplies (ug/L)',
@@ -204,10 +205,8 @@ ui <- shinyUI(
           width = 7, height = "500px",
           ribbon = TRUE, color = 'red'),
         box(
-         h3("Hello World!"), h3('\n'),
-         h5("This dashboard is designed to visually identify key factors impacting chemical concentrations."),
-         h5("These concentrations exist across US county water supplies."), 
-         h5("The underlying data set contains info on contaminant levels, drought severities, industry occupations, and water usage from 2010 to 2016."),    
+         h3("Welcome to the Water-Chemical Dashboard!"), h3('\n'),
+         h5("This dashboard is designed to visually identify key factors impacting chemical concentrations in county municipal water supplies."),
          h5("To get started, select:"),
          h5("    1) A year from the slider below"),
          h5("    2) A chemical substance from the dropdown below"),
@@ -238,20 +237,19 @@ ui <- shinyUI(
       box(plotlyOutput("severity"), width = 6, height = '400px'),
       box(plotlyOutput("sev_scatter"), width = 6, height = '400px')
     ),
+    h3("Industry Occupation Data"),
+    fluidRow(
+      box(plotlyOutput("industry"), width = 12, height = '500px')
+      ),
     h3("Water Usage Data"),
     fluidRow(
       #box(dataTableOutput("public"), width = 4, height = '400px')
       box(plotlyOutput("public"), width = 4, height = '450px'),
       box(plotlyOutput("irrigation"), width = 4, height = '450px'),
       box(plotlyOutput("thermal"), width = 4, height = '450px')
-    ),
-    h3("Industry Occupation Data"),
-    fluidRow(
-      box(plotlyOutput("industry"), width = 12, height = '500px')
       )
     ),
-  theme = 'lux'
-  
+  skin='black'
   )
 )
 
