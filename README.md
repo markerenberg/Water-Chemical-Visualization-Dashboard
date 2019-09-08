@@ -1,5 +1,8 @@
 # Water-Chemical Visualization Dashboard
 
+## Dashboard Link
+https://markkerenberg.shinyapps.io/final_app/
+
 ## Purpose
 This dashboard was designed to investigate factors impacting chemical contaminants in US county municipal water supplies. It uses multiple forms of data visualizations to identify the influence of geography, population, drought severity, working population, and water usage in a county's chemical contaminant levels.
 
